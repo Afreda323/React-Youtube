@@ -1,0 +1,284 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@keyframes fadeIn {
+    from{
+      opacity: 0;
+    }
+}
+*{
+  transition: all .5s;
+  animation: fadeIn .7s;
+}
+html, body, div, span, applet, object,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, p, input{
+  font-weight: 300;
+}
+body {
+  background: #e7e7e7;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+/*************
+                    PreSearch  styles
+                    *******************/
+.flex{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("sky.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.flex .searchbar{
+  border-radius: 10px;
+  padding: 5em;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.flex h1{
+  font-size: 2.6em;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+}
+.flex .input{
+  width: 300px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 5px;
+}
+.flex .searchButton{
+  border-radius: 5px;
+  border: none;
+  margin-left: 4px;
+  background-color: white;
+  padding: 6px 9px;
+  font-size: 1em;
+}
+.flex .video{
+  display: none;
+}
+.flex .ul{
+  display: none;
+}
+.searched .searchbar h1, .searched .searchButton{
+  display: none;
+}
+
+.searched .input{
+  background: white;
+  margin-top: 8px;
+  width: 100%;
+  font-size: 1em;
+  border: 1px solid #2196F3;
+  -webkit-box-shadow: 1px 7px 14px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 7px 14px -3px rgba(0,0,0,0.75);
+box-shadow: 1px 7px 14px -3px rgba(0,0,0,0.75);
+  padding: 15px 5px 12px;
+  margin-bottom: 15px;
+}
+.searched .input:focus{
+  -webkit-box-shadow: 7px 12px 14px -3px rgba(0,0,0,0.65);
+  -moz-box-shadow: 7px 12px 14px -3px rgba(0,0,0,0.65);
+  box-shadow: 7px 12px 14px -3px rgba(0,0,0,0.65);
+}
+.searched .video{
+  display: block;
+}
+
+
+
+
+/*************
+                    Video Player styles
+                    *******************/
+.info{
+  background: white;
+  -webkit-box-shadow: 1px 7px 14px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 7px 14px -3px rgba(0,0,0,0.75);
+  box-shadow: 1px 7px 14px -3px rgba(0,0,0,0.75);
+  padding: 10px 10px 2.4em;
+}
+
+.vidcontainer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.searched .iframe {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video h2{
+  margin-top: 20px;
+  padding-bottom: 15px;
+  font-size: 2em;
+  border-bottom: 1px solid #ddd;
+}
+.video p{
+  margin-top: 15px;
+  font-size: 1.3em;
+}
+
+/*************
+                    List styles
+                    *******************/
+.searched .ul{
+  display: block;
+}
+.ul li{
+  background: white;
+  box-sizing: border-box;
+  -webkit-box-shadow: 1px 7px 14px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 7px 14px -3px rgba(0,0,0,0.75);
+  box-shadow: 1px 7px 14px -3px rgba(0,0,0,0.75);
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+}
+li:hover{
+  cursor: pointer;
+  -webkit-box-shadow: 7px 12px 14px -3px rgba(0,0,0,0.65);
+  -moz-box-shadow: 7px 12px 14px -3px rgba(0,0,0,0.65);
+  box-shadow: 7px 12px 14px -3px rgba(0,0,0,0.65);
+}
+.thumb{
+  width: 100%;
+}
+.cap{
+  margin: 10px 0 10px;
+}
+.cap p{
+ padding-bottom: 0;
+}
+.cap h2{
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+/*************
+                    Footer styles
+                    *******************/
+footer{
+-webkit-box-shadow: 1px -3px 14px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px -3px 14px -3px rgba(0,0,0,0.75);
+box-shadow: 1px -3px 14px -3px rgba(0,0,0,0.75);
+  padding: 1em 0;
+  background-color: #222;
+  color: #eee;
+}
+footer .lead{
+  margin: 0;
+}
+
+
+
+@media (max-width: 900px) {
+  #searchWrap{
+    margin: 0;
+    width: 100%;
+  }
+   #search{
+    padding: 0
+  }
+  .flex .searchbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;;
+    width: 100%;
+    padding: 5em 0;
+  }
+  .flex .searchButton{
+    margin-top: 4px;
+  }
+  .searched{
+    padding-bottom: 5em;
+    text-align: center;
+  }
+  .searched .input{
+    width: 100%;
+    padding: 15px 2px 12px;
+  }
+  .searched .video{
+    padding: 0;
+    width: 100%;
+    min-width: 100%;
+    text-align: left;
+  }
+
+  .video h2, .video p{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .searched .ul{
+    text-align: left;
+    padding: 0;
+    width: 100%;
+  }
+  .ul .col-xs-4{
+    padding: 0;
+  }
+  .ul li{
+    margin: 20px 0;
+    height: auto;
+  }
+  .listWrap{
+    margin-top: 20px;
+  }
+}
